@@ -2,14 +2,6 @@ import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 import { Controller } from "react-hook-form";
 
-/**
- * A React component that renders a TinyMCE editor with a label and a default value.
- * @param {string} name - The name of the editor field.
- * @param {Object} control - The control object from react-hook-form.
- * @param {string} label - The label to display above the editor.
- * @param {string} defaultValue - The default value of the editor.
- * @returns {JSX.Element} A JSX element that renders the editor.
- */
 export default function RTE({ name, control, label, defaultValue = "" }) {
   return (
     <div className="w-full">
@@ -20,7 +12,8 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
         control={control}
         render={({ field: { onChange } }) => (
           <Editor
-            initialValue={defaultValue}
+            initialValue=""
+            apiKey="e0i640d2nlz7lfvx5m3kaoviu33ozj3jxkkhvuaylocmnr0z"
             init={{
               initialValue: defaultValue,
               height: 500,
